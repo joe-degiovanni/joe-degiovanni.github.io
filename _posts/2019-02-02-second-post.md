@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Second Jekyll Post"
+author: "Joe Degiovanni"
 ---
 
 # Second Jekyll Post

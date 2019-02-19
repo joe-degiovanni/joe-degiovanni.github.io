@@ -1,10 +1,9 @@
 ---
 layout: default
-title:  "Test"
+title:  "Blog"
 ---
 
-# test
-test test
+# Recent Posts
 
 {% for post in site.posts %}
  1. [{{post.title}}]({{post.url}})
