@@ -13,14 +13,11 @@ h1, h2, h3 {
 
 h2 {
     margin-top: 5px;
+    color: #4475a0;
 }
 
 h3 {
     margin-top: 10px;
-}
-
-h2 {
-    color: #4475a0;
 }
 
 a {
@@ -44,19 +41,5 @@ section {
     margin-bottom: 25px;
 }
 
-#monogram {
-    float: right;
-    width: 50px;
-    height: 50px;
-}
-
-li{list-style-type:circle;}
+li {list-style-type:circle;}
 img {border:none;}
-
-
-@media print {
-    /* All your print styles go here */
-    body {background-color: white; color: black}
-    a {color: black}
-    #monogram {display: none;}
-}
