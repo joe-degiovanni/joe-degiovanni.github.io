@@ -43,3 +43,11 @@ section {
 
 li {list-style-type:circle;}
 img {border:none;}
+
+button {float: right}
+
+@media print {
+    button {
+        display: none;
+    }
+}

@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="./resume.css"/>
 </head>
 <body>
-<header>
-    <h1>Joe Degiovanni</h1>
-    <a href="tel:320-250-1808">📞 320.250.1808</a> |
-    <a href="mailto:joe.degiovanni@gmail.com">✉️ joe.degiovanni@gmail.com</a> |
-    <a href="https://joedegiovanni.info" target="_blank">🌐 joedegiovanni.info</a>
-</header>
+<button onclick="exportHTML();">📝 Export to Word</button> <button onclick="window.print();">🖨️ Print</button>
 <main>
+    <header>
+        <h1>Joe Degiovanni</h1>
+        <a href="tel:320-250-1808">📞 320.250.1808</a> |
+        <a href="mailto:joe.degiovanni@gmail.com">✉️ joe.degiovanni@gmail.com</a> |
+        <a href="https://joedegiovanni.info" target="_blank">🌐 joedegiovanni.info</a>
+    </header>
 
     <section>
         <h2>🔧 SKILLS</h2>
@@ -133,4 +134,29 @@
     </section>
 </main>
 </body>
+<script>
+    function exportHTML(){
+        var header = `<html xmlns:o='urn:schemas-microsoft-com:office:office
+            xmlns:w='urn:schemas-microsoft-com:office:word'
+            xmlns='http://www.w3.org/TR/REC-html40'>
+            <head>
+            <meta charset='utf-8'/>
+            <title>Joe Degiovanni Resume</title>
+            <style>
+              body {font-family: sans-serif; font-size: 10pt}
+            </style>
+            </head>
+            <body>`;
+        var footer = "</body></html>";
+        var sourceHTML = header+ document.body.getElementsByTagName("main").item(0).innerHTML + footer;
+
+        var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
+        var fileDownload = document.createElement("a");
+        document.body.appendChild(fileDownload);
+        fileDownload.href = source;
+        fileDownload.download = 'degiovanni_resume.doc';
+        fileDownload.click();
+        document.body.removeChild(fileDownload);
+    }
+</script>
 </html>
