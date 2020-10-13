@@ -1,0 +1,53 @@
+body {
+    background-color: #333;
+    max-width: 900px;
+    margin: auto;
+    color: #fff;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0px;
+}
+
+h2 {
+    color: cornflowerblue;
+}
+
+a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p, ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+section {
+    border-top: 1px solid black;
+    margin-top: 20px;
+}
+
+#monogram {
+    float: right;
+    width: 50px;
+    height: 50px;
+}
+
+li{list-style-type:circle;}
+img {border:none;}
+
+
+@media print {
+    /* All your print styles go here */
+    body {background-color: white; color: black}
+    a {color: black}
+    #monogram {display: none;}
+}
